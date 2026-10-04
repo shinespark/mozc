@@ -91,8 +91,8 @@ def main():
     domain_prefix = 'com.google'
     product_name = 'Google Japanese Input'
   else:
-    domain_prefix = 'org.mozc'
-    product_name = 'Mozc'
+    domain_prefix = 'io.github.shinespark'
+    product_name = 'yuzKey'
 
   variables = {
       'GOOGLE_VERSIONINFO_LONG': long_version,

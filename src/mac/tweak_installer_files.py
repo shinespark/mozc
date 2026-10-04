@@ -112,7 +112,7 @@ def SymlinkQtFrameworks(app_dir: str) -> None:
 
 def TweakQtApps(top_dir: str, oss: bool) -> None:
   """Tweak the resource files for the Qt applications."""
-  name = 'Mozc' if oss else 'GoogleJapaneseInput'
+  name = 'yuzKey' if oss else 'GoogleJapaneseInput'
   sub_qt_apps = [
       'AboutDialog',
       'DictionaryTool',
@@ -142,8 +142,8 @@ def TweakForProductbuild(
 
   if oss:
     is_dev_channel = False
-    name = 'Mozc'
-    folder = 'Mozc'
+    name = 'yuzKey'
+    folder = 'yuzKey'
   else:
     is_dev_channel = channel == 'dev'
     name = 'GoogleJapaneseInput'
