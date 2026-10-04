@@ -212,7 +212,7 @@ std::string UserProfileDirectoryImpl::GetUserProfileDirectory() const {
     ::mkdir(dir.c_str(), 0755);
     return FileUtil::JoinPath(dir, "JapaneseInput");
 #else   //  GOOGLE_JAPANESE_INPUT_BUILD
-    return FileUtil::JoinPath(dir, "Mozc");
+    return FileUtil::JoinPath(dir, "yuzKey");
 #endif  //  GOOGLE_JAPANESE_INPUT_BUILD
 
 #elif defined(__linux__)

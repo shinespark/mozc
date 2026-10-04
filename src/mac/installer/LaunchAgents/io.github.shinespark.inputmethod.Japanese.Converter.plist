@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Program</key>
-	<string>/Library/Input Methods/Mozc.app/Contents/Resources/MozcRenderer.app/Contents/MacOS/MozcRenderer</string>
+	<string>/Library/Input Methods/yuzKey.app/Contents/Resources/yuzKeyConverter.app/Contents/MacOS/yuzKeyConverter</string>
 	<key>Label</key>
-	<string>org.mozc.inputmethod.Japanese.Renderer</string>
+	<string>io.github.shinespark.inputmethod.Japanese.Converter</string>
 	<key>MachServices</key>
 	<dict>
-		<key>org.mozc.inputmethod.Japanese.Renderer.renderer</key>
+		<key>io.github.shinespark.inputmethod.Japanese.Converter.session</key>
 		<true/>
 	</dict>
 	<key>KeepAlive</key>

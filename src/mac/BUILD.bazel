@@ -391,7 +391,7 @@ mozc_macos_application(
     bundle_name = "Uninstall" +
                   mozc_select(
                       default = "GoogleJapaneseInput",
-                      oss = "Mozc",
+                      oss = "yuzKey",
                       prod = "GoogleJapaneseInput",
                   ),
     infoplists = ["Uninstaller/Info.plist"],

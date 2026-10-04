@@ -83,10 +83,10 @@ def main():
         }
   else:
     variables = {
-        'CF_BUNDLE_NAME_EN': 'Mozc',
-        'CF_BUNDLE_NAME_JA': 'Mozc',
+        'CF_BUNDLE_NAME_EN': 'yuzKey',
+        'CF_BUNDLE_NAME_JA': 'yuzKey',
         'NS_HUMAN_READABLE_COPYRIGHT': copyright_message,
-        'INPUT_MODE_ANNOTATION': 'Mozc',
+        'INPUT_MODE_ANNOTATION': 'yuzKey',
         }
 
   codecs.open(options.output, 'w', encoding='utf-8').write(
