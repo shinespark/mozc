@@ -72,7 +72,10 @@ filegroup(
         "dictionary08.txt",
         "dictionary09.txt",
         "//dictionary:zip_code_data",
-    ],
+    ] + glob(
+        ["dictionary_ut.txt"],
+        allow_empty = True,
+    ),
     visibility = ["//visibility:private"],
 )
 
