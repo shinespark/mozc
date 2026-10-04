@@ -75,3 +75,7 @@ MODULE.bazel.lock
 /src/android/resources/res
 /src/android/tests/AndroidManifest.xml
 /src/android/tests/libs/
+
+# Mozc UT dictionary fetched by scripts/fetch_ut_dictionary.sh
+/.cache/
+/src/data/dictionary_oss/dictionary_ut.txt
