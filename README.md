@@ -1,81 +1,27 @@
-[Mozc - a Japanese Input Method Editor designed for multi-platform](https://github.com/google/mozc)
-===================================
+# yuzKey
 
-Copyright 2010-2026 Google LLC
+[Mozc](https://github.com/google/mozc) をフォークした、自分用の macOS 向け日本語 IME。upstream への還元は考えていない。
 
-Mozc is a Japanese Input Method Editor (IME) designed for multi-platform such as
-Android OS, Apple macOS, Chromium OS, GNU/Linux and Microsoft Windows.  This
-OpenSource project originates from
-[Google Japanese Input](http://www.google.com/intl/ja/ime/).
+## Mozc との違い
 
-Mozc is not an officially supported Google product.
+- Dvorak のホーム段（aoeuidhtn）で候補を選べる（設定画面の「A -- N (Dvorak)」）
+- [Mozc UT 辞書](https://github.com/utuhiro78/merge-ut-dictionaries)を取り込める
 
-Build Status
-------------
+## ビルド
 
-| Linux | Windows | macOS | Android lib |
-|:-----:|:-------:|:-----:|:-----------:|
-| [![Linux](https://github.com/google/mozc/actions/workflows/linux.yaml/badge.svg)](https://github.com/google/mozc/actions/workflows/linux.yaml) | [![Windows](https://github.com/google/mozc/actions/workflows/windows.yaml/badge.svg)](https://github.com/google/mozc/actions/workflows/windows.yaml) | [![macOS](https://github.com/google/mozc/actions/workflows/macos.yaml/badge.svg)](https://github.com/google/mozc/actions/workflows/macos.yaml) | [![Android lib](https://github.com/google/mozc/actions/workflows/android.yaml/badge.svg)](https://github.com/google/mozc/actions/workflows/android.yaml) |
+手順は [docs/build_mozc_in_osx.md](docs/build_mozc_in_osx.md) を参照。UT 辞書を入れるときは、先に `scripts/fetch_ut_dictionary.sh` を実行する。
 
+```sh
+cd src
+bazelisk build package --config release_build
+open bazel-bin/mac/Mozc.pkg
+```
 
-What's Mozc?
-------------
-For historical reasons, the project name *Mozc* has two different meanings:
+## ブランチ
 
-1. Internal code name of Google Japanese Input that is still commonly used
-   inside Google.
-2. Project name to release a subset of Google Japanese Input in the form of
-   source code under OSS license without any warranty nor user support.
+- `master`: upstream（google/mozc）の追跡用
+- `main`: 自分の変更を 1 機能 1 コミットで積み、upstream に rebase する
 
-In this repository, *Mozc* means the second definition unless otherwise noted.
+## ライセンス
 
-Detailed differences between Google Japanese Input and Mozc are described in [About Branding](docs/about_branding.md).
-
-For policies on vocabulary and conversion results, see
-[Vocabulary Policy](VOCABULARY_POLICY.md).
-
-Build Instructions
-------------------
-
-* [How to build Mozc for Android](docs/build_mozc_for_android.md): for Android library (`libmozc.so`)
-* [How to build Mozc for Linux](docs/build_mozc_for_linux.md): for Linux desktop
-* [How to build Mozc for macOS](docs/build_mozc_in_osx.md): for macOS build
-* [How to build Mozc for Windows](docs/build_mozc_in_windows.md): for Windows
-
-Release Plan
-------------
-
-tl;dr. **There is no stable version.**
-
-As described in [About Branding](docs/about_branding.md) page, Google does
-not promise any official QA for OSS Mozc project.  Because of this,
-Mozc does not have a concept of *Stable Release*.  Instead we change version
-number every time when we introduce non-trivial change.  If you are
-interested in packaging Mozc source code, or developing your own products
-based on Mozc, feel free to pick up any version.  They should be equally
-stable (or equally unstable) in terms of no official QA process.
-
-[Release History](docs/release_history.md) page may have additional
-information and useful links about recent changes.
-
-License
--------
-
-All Mozc code written by Google is released under
-[The BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause).
-For third party code under [src/third_party](src/third_party) directory,
-see each sub directory to find the copyright notice.  Note also that
-outside [src/third_party](src/third_party) following directories contain
-third party code.
-
-### [src/data/dictionary_oss/](src/data/dictionary_oss)
-Mixed.
-See [src/data/dictionary_oss/README.txt](src/data/dictionary_oss/README.txt)
-
-### [src/data/test/dictionary/](src/data/test/dictionary)
-The same as [src/data/dictionary_oss/](src/data/dictionary_oss).
-See [src/data/dictionary_oss/README.txt](src/data/dictionary_oss/README.txt)
-
-### [src/data/test/stress_test/](src/data/test/stress_test)
-Public Domain.  See the comment in
-[src/data/test/stress_test/sentences.txt](src/data/test/stress_test/sentences.txt)
+Mozc と同じく [BSD 3-Clause License](LICENSE)。`src/third_party` や辞書データなど、サードパーティのものはそれぞれのライセンスに従う。
