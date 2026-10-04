@@ -175,6 +175,7 @@ ConfigDialog::ConfigDialog()
   selectionShortcutModeComboBox->addItem(tr("No shortcut"));
   selectionShortcutModeComboBox->addItem(tr("1 -- 9"));
   selectionShortcutModeComboBox->addItem(tr("A -- L"));
+  selectionShortcutModeComboBox->addItem(tr("A -- N (Dvorak)"));
 
   historyLearningLevelComboBox->addItem(tr("Yes"));
   historyLearningLevelComboBox->addItem(tr("Yes (don't record new data)"));
