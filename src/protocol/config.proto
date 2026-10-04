@@ -199,6 +199,7 @@ message Config {
     NO_SHORTCUT = 0;
     SHORTCUT_123456789 = 1;
     SHORTCUT_ASDFGHJKL = 2;
+    SHORTCUT_AOEUIDHTN = 3;
   }
   optional SelectionShortcut selection_shortcut = 52
       [default = SHORTCUT_123456789];

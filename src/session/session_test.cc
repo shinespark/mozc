@@ -3883,11 +3883,13 @@ TEST_F(SessionTest, Shortcut) {
       config::Config::NO_SHORTCUT,
       config::Config::SHORTCUT_123456789,
       config::Config::SHORTCUT_ASDFGHJKL,
+      config::Config::SHORTCUT_AOEUIDHTN,
   };
   const std::string kDataExpected[][2] = {
       {"", ""},
       {"1", "2"},
       {"a", "s"},
+      {"a", "o"},
   };
   for (size_t i = 0; i < std::size(kDataShortcut); ++i) {
     config::Config::SelectionShortcut shortcut = kDataShortcut[i];

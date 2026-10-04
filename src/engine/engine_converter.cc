@@ -76,6 +76,7 @@ absl::string_view GetCandidateShortcuts(
   // Keyboard shortcut for candidates.
   constexpr absl::string_view kShortcut123456789 = "123456789";
   constexpr absl::string_view kShortcutASDFGHJKL = "asdfghjkl";
+  constexpr absl::string_view kShortcutAOEUIDHTN = "aoeuidhtn";
   constexpr absl::string_view kNoShortcut = "";
 
   absl::string_view shortcut = kNoShortcut;
@@ -85,6 +86,9 @@ absl::string_view GetCandidateShortcuts(
       break;
     case config::Config::SHORTCUT_ASDFGHJKL:
       shortcut = kShortcutASDFGHJKL;
+      break;
+    case config::Config::SHORTCUT_AOEUIDHTN:
+      shortcut = kShortcutAOEUIDHTN;
       break;
     case config::Config::NO_SHORTCUT:
       break;
